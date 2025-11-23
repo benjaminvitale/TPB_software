@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.udesa.giftcards.controller.GiftCardControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-11-23T21:28:11.379Z" hostname="Benjas-MacBook-Air.local" time="0.4">
+<testsuite name="org.udesa.giftcards.controller.GiftCardControllerTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2025-11-23T22:39:03.584Z" hostname="Benjas-MacBook-Air.local" time="0.443">
   <properties/>
-  <testcase name="test08MerchantCanChargeACard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.167"/>
-  <testcase name="test12TokenExpiresAfterTime()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.024"/>
-  <testcase name="test02CannotLoginWithInvalidUser()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.007"/>
-  <testcase name="test04CanRedeemACard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
-  <testcase name="test11DetailsShowCharges()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.038"/>
-  <testcase name="test09MerchantCannotChargeMoreThanBalance()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
-  <testcase name="test10CannotChargeInvalidMerchant()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.012"/>
-  <testcase name="test07CannotCheckBalanceOfNotOwnedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.01"/>
+  <testcase name="test08MerchantCanChargeACard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.128"/>
+  <testcase name="test19UserCannotRedeemTheSameCardTwice()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.017"/>
+  <testcase name="test16TokenExpiredFailsOnRedeemAndDetails()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
+  <testcase name="test18MerchantCannotChargeUnredeemedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.008"/>
+  <testcase name="test12TokenExpiresAfterTime()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
+  <testcase name="test02CannotLoginWithInvalidUser()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.005"/>
+  <testcase name="test15InvalidTokenRejectedEverywhere()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.008"/>
+  <testcase name="test04CanRedeemACard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.015"/>
+  <testcase name="test17DetailsMustBeInCorrectOrder()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.046"/>
+  <testcase name="test11DetailsShowCharges()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.026"/>
+  <testcase name="test09MerchantCannotChargeMoreThanBalance()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.017"/>
+  <testcase name="test10CannotChargeInvalidMerchant()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.014"/>
+  <testcase name="test07CannotCheckBalanceOfNotOwnedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
   <testcase name="test06CanCheckBalanceOfOwnedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.014"/>
-  <testcase name="test03CannotLoginWithInvalidPassword()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
-  <testcase name="test05CannotRedeemAlreadyOwnedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.049"/>
-  <testcase name="test01CanLoginWithValidUser()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.019"/>
-  <system-out><![CDATA[18:28:07.237 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.udesa.giftcards.controller.GiftCardControllerTest]: GiftCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18:28:07.325 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.udesa.giftcards.GiftcardsApplication for test class org.udesa.giftcards.controller.GiftCardControllerTest
+  <testcase name="test14BalanceFailsForNonExistingCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.011"/>
+  <testcase name="test20MerchantNameIsPersisted()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.009"/>
+  <testcase name="test03CannotLoginWithInvalidPassword()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.008"/>
+  <testcase name="test05CannotRedeemAlreadyOwnedCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.024"/>
+  <testcase name="test13CannotRedeemNonExistingCard()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.01"/>
+  <testcase name="test01CanLoginWithValidUser()" classname="org.udesa.giftcards.controller.GiftCardControllerTest" time="0.016"/>
+  <system-out><![CDATA[2025-11-23T19:39:02.768-03:00  INFO 26621 --- [giftcards] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.udesa.giftcards.controller.GiftCardControllerTest]: GiftCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-23T19:39:02.778-03:00  INFO 26621 --- [giftcards] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.udesa.giftcards.GiftcardsApplication for test class org.udesa.giftcards.controller.GiftCardControllerTest
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -24,24 +32,23 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2025-11-23T18:28:07.557-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : Starting GiftCardControllerTest using Java 23-valhalla with PID 24156 (started by benjavitale in /Users/benjavitale/IdeaProjects/TPB_software)
-2025-11-23T18:28:07.558-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : No active profile set, falling back to 1 default profile: "default"
-2025-11-23T18:28:08.063-03:00  INFO 24156 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-23T18:28:08.095-03:00  INFO 24156 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
-2025-11-23T18:28:09.107-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-23T18:28:09.385-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ee238907-33b7-4e91-ae12-40da386bc089 user=SA
-2025-11-23T18:28:09.386-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-23T18:28:09.447-03:00  INFO 24156 --- [giftcards] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-23T18:28:09.502-03:00  INFO 24156 --- [giftcards] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-11-23T18:28:09.521-03:00  INFO 24156 --- [giftcards] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-23T18:28:09.614-03:00  INFO 24156 --- [giftcards] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-23T18:28:10.310-03:00  INFO 24156 --- [giftcards] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-23T18:28:10.343-03:00  INFO 24156 --- [giftcards] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-23T18:28:10.708-03:00  WARN 24156 --- [giftcards] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-23T18:28:11.018-03:00  INFO 24156 --- [giftcards] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-11-23T18:28:11.019-03:00  INFO 24156 --- [giftcards] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-11-23T18:28:11.020-03:00  INFO 24156 --- [giftcards] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-11-23T18:28:11.047-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : Started GiftCardControllerTest in 3.633 seconds (process running for 4.47)
+2025-11-23T19:39:02.792-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : Starting GiftCardControllerTest using Java 23-valhalla with PID 26621 (started by benjavitale in /Users/benjavitale/IdeaProjects/TPB_software)
+2025-11-23T19:39:02.793-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-11-23T19:39:03.050-03:00  INFO 26621 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-23T19:39:03.058-03:00  INFO 26621 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2025-11-23T19:39:03.239-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-23T19:39:03.241-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:8164cbaa-9886-4301-bc28-3f59e409be41 user=SA
+2025-11-23T19:39:03.241-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-23T19:39:03.243-03:00  INFO 26621 --- [giftcards] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-23T19:39:03.247-03:00  INFO 26621 --- [giftcards] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-23T19:39:03.255-03:00  INFO 26621 --- [giftcards] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-23T19:39:03.309-03:00  INFO 26621 --- [giftcards] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-23T19:39:03.314-03:00  INFO 26621 --- [giftcards] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-23T19:39:03.423-03:00  WARN 26621 --- [giftcards] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-23T19:39:03.556-03:00  INFO 26621 --- [giftcards] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-23T19:39:03.556-03:00  INFO 26621 --- [giftcards] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-23T19:39:03.557-03:00  INFO 26621 --- [giftcards] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-11-23T19:39:03.564-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.g.controller.GiftCardControllerTest  : Started GiftCardControllerTest in 0.783 seconds (process running for 6.71)
 >>> Usuarios cargados.
 >>> Merchants cargados.
 >>> GiftCards cargadas.
@@ -49,7 +56,7 @@
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1564707583], pass=[Pass1322262504]}
+       Parameters = {user=[User1861718410], pass=[Pass1753835885]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -78,16 +85,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"8dc8ed0d-b466-43eb-9959-621ce6fedb23"}
+             Body = {"token":"75d08ff5-9d5d-4c94-afd1-3dc179b04b89"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1607228823/redeem
+      Request URI = /api/giftcards/GC593381729/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 8dc8ed0d-b466-43eb-9959-621ce6fedb23"]
+          Headers = [Authorization:"Bearer 75d08ff5-9d5d-4c94-afd1-3dc179b04b89"]
              Body = null
     Session Attrs = {}
 
@@ -122,8 +129,8 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1607228823/charge
-       Parameters = {merchant=[M1069100433], amount=[20], description=[Cafe]}
+      Request URI = /api/giftcards/GC593381729/charge
+       Parameters = {merchant=[M794962741], amount=[20], description=[Cafe]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -159,9 +166,9 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC1607228823/balance
+      Request URI = /api/giftcards/GC593381729/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer 8dc8ed0d-b466-43eb-9959-621ce6fedb23"]
+          Headers = [Authorization:"Bearer 75d08ff5-9d5d-4c94-afd1-3dc179b04b89"]
              Body = null
     Session Attrs = {}
 
@@ -197,7 +204,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User421379686], pass=[Pass326452565]}
+       Parameters = {user=[User1727283524], pass=[Pass537909315]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -226,16 +233,275 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"874a27e1-52d9-4c8e-b40e-4d6b72a65f9b"}
+             Body = {"token":"1eee9c97-5f3d-4931-90fb-2cbb1c12c7b9"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1534097068/redeem
+      Request URI = /api/giftcards/GC666041895/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 874a27e1-52d9-4c8e-b40e-4d6b72a65f9b"]
+          Headers = [Authorization:"Bearer 1eee9c97-5f3d-4931-90fb-2cbb1c12c7b9"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"13"]
+     Content type = text/plain;charset=UTF-8
+             Body = Card redeemed
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC666041895/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer 1eee9c97-5f3d-4931-90fb-2cbb1c12c7b9"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"11"]
+     Content type = text/plain;charset=UTF-8
+             Body = InvalidCard
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/login
+       Parameters = {user=[User1939159674], pass=[Pass875309169]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#login(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"token":"e741fd00-ca3b-41a3-a52d-e4d3ed5249e4"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC1777092254/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer e741fd00-ca3b-41a3-a52d-e4d3ed5249e4"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = InvalidToken
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/giftcards/GC1777092254/balance
+       Parameters = {}
+          Headers = [Authorization:"Bearer e741fd00-ca3b-41a3-a52d-e4d3ed5249e4"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#balance(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = InvalidToken
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC2074555443/charge
+       Parameters = {merchant=[M128768187], amount=[10], description=[Intento de Cobro]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#charge(String, int, String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"14"]
+     Content type = text/plain;charset=UTF-8
+             Body = CargoImposible
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/login
+       Parameters = {user=[User1270326576], pass=[Pass1434454868]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#login(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"token":"52ba0c69-e8bc-4de2-ae76-5c042ab01ca7"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC639062841/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer 52ba0c69-e8bc-4de2-ae76-5c042ab01ca7"]
              Body = null
     Session Attrs = {}
 
@@ -270,9 +536,9 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC1534097068/balance
+      Request URI = /api/giftcards/GC639062841/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer 874a27e1-52d9-4c8e-b40e-4d6b72a65f9b"]
+          Headers = [Authorization:"Bearer 52ba0c69-e8bc-4de2-ae76-5c042ab01ca7"]
              Body = null
     Session Attrs = {}
 
@@ -344,8 +610,82 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
+      Request URI = /api/giftcards/GC1387415864/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer Bearer basura_mal_formada"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = InvalidToken
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/giftcards/GC1387415864/balance
+       Parameters = {}
+          Headers = [Authorization:"Bearer Bearer basura_mal_formada"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#balance(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = InvalidToken
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1897816187], pass=[Pass1116648499]}
+       Parameters = {user=[User397309584], pass=[Pass1659900150]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -374,16 +714,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"3a955ee1-b63e-49fd-84ed-2b69d8286741"}
+             Body = {"token":"284e7604-5b05-49b9-a621-d0ae0240f5bc"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC2041938574/redeem
+      Request URI = /api/giftcards/GC2134135163/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 3a955ee1-b63e-49fd-84ed-2b69d8286741"]
+          Headers = [Authorization:"Bearer 284e7604-5b05-49b9-a621-d0ae0240f5bc"]
              Body = null
     Session Attrs = {}
 
@@ -418,9 +758,9 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC2041938574/balance
+      Request URI = /api/giftcards/GC2134135163/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer 3a955ee1-b63e-49fd-84ed-2b69d8286741"]
+          Headers = [Authorization:"Bearer 284e7604-5b05-49b9-a621-d0ae0240f5bc"]
              Body = null
     Session Attrs = {}
 
@@ -456,7 +796,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User2018503476], pass=[Pass227260425]}
+       Parameters = {user=[User523314392], pass=[Pass19613262]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -485,16 +825,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"c89d37f6-d973-4799-af14-8d84f5694aef"}
+             Body = {"token":"63244dcb-cb43-484d-a952-d1e4f586b9e2"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1237840154/redeem
+      Request URI = /api/giftcards/GC345555432/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer c89d37f6-d973-4799-af14-8d84f5694aef"]
+          Headers = [Authorization:"Bearer 63244dcb-cb43-484d-a952-d1e4f586b9e2"]
              Body = null
     Session Attrs = {}
 
@@ -529,8 +869,8 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1237840154/charge
-       Parameters = {merchant=[M1510350622], amount=[10], description=[Item1]}
+      Request URI = /api/giftcards/GC345555432/charge
+       Parameters = {merchant=[M18128730], amount=[10], description=[Primero]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -566,8 +906,45 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1237840154/charge
-       Parameters = {merchant=[M1510350622], amount=[20], description=[Item2]}
+      Request URI = /api/giftcards/GC345555432/charge
+       Parameters = {merchant=[M18128730], amount=[20], description=[Segundo]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#charge(String, int, String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"14"]
+     Content type = text/plain;charset=UTF-8
+             Body = Charge applied
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC345555432/charge
+       Parameters = {merchant=[M18128730], amount=[30], description=[Tercero]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -603,9 +980,194 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC1237840154/details
+      Request URI = /api/giftcards/GC345555432/details
        Parameters = {}
-          Headers = [Authorization:"Bearer c89d37f6-d973-4799-af14-8d84f5694aef"]
+          Headers = [Authorization:"Bearer 63244dcb-cb43-484d-a952-d1e4f586b9e2"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#details(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"details":["Primero","Segundo","Tercero"]}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/login
+       Parameters = {user=[User366756904], pass=[Pass2127170918]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#login(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"token":"f244f613-a861-4cb5-9784-48991590f492"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC664837788/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer f244f613-a861-4cb5-9784-48991590f492"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"13"]
+     Content type = text/plain;charset=UTF-8
+             Body = Card redeemed
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC664837788/charge
+       Parameters = {merchant=[M489947171], amount=[10], description=[Item1]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#charge(String, int, String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"14"]
+     Content type = text/plain;charset=UTF-8
+             Body = Charge applied
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC664837788/charge
+       Parameters = {merchant=[M489947171], amount=[20], description=[Item2]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#charge(String, int, String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"14"]
+     Content type = text/plain;charset=UTF-8
+             Body = Charge applied
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/giftcards/GC664837788/details
+       Parameters = {}
+          Headers = [Authorization:"Bearer f244f613-a861-4cb5-9784-48991590f492"]
              Body = null
     Session Attrs = {}
 
@@ -641,7 +1203,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1539819568], pass=[Pass995109235]}
+       Parameters = {user=[User528065257], pass=[Pass1858001662]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -670,16 +1232,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"d7b2000c-4f30-4670-8e4a-98440efe3d3b"}
+             Body = {"token":"5b9229a1-acd4-48ca-8b2c-6674310c46a6"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC448017776/redeem
+      Request URI = /api/giftcards/GC65732567/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer d7b2000c-4f30-4670-8e4a-98440efe3d3b"]
+          Headers = [Authorization:"Bearer 5b9229a1-acd4-48ca-8b2c-6674310c46a6"]
              Body = null
     Session Attrs = {}
 
@@ -714,8 +1276,8 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC448017776/charge
-       Parameters = {merchant=[M151410375], amount=[20], description=[Caro]}
+      Request URI = /api/giftcards/GC65732567/charge
+       Parameters = {merchant=[M2063259661], amount=[20], description=[Caro]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -752,7 +1314,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1541525882], pass=[Pass2109549901]}
+       Parameters = {user=[User311526775], pass=[Pass704805728]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -781,16 +1343,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"4251b358-8ce4-44e8-82bd-a03160d263a8"}
+             Body = {"token":"3ee7171a-f5bb-4eaa-97c9-992e5dada5bc"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC872525553/redeem
+      Request URI = /api/giftcards/GC2020988500/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 4251b358-8ce4-44e8-82bd-a03160d263a8"]
+          Headers = [Authorization:"Bearer 3ee7171a-f5bb-4eaa-97c9-992e5dada5bc"]
              Body = null
     Session Attrs = {}
 
@@ -825,7 +1387,7 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC872525553/charge
+      Request URI = /api/giftcards/GC2020988500/charge
        Parameters = {merchant=[FakeMerchant], amount=[10], description=[Robo]}
           Headers = []
              Body = null
@@ -863,7 +1425,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1623153302], pass=[Pass1012564937]}
+       Parameters = {user=[User109734994], pass=[Pass74802481]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -892,16 +1454,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"0a2c2312-fbdf-456b-8b1d-d2d0a24f4f1f"}
+             Body = {"token":"db6ef732-31fd-492c-82f8-bd4d8fb90fda"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC31344750/balance
+      Request URI = /api/giftcards/GC1830212702/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer 0a2c2312-fbdf-456b-8b1d-d2d0a24f4f1f"]
+          Headers = [Authorization:"Bearer db6ef732-31fd-492c-82f8-bd4d8fb90fda"]
              Body = null
     Session Attrs = {}
 
@@ -937,7 +1499,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User497330274], pass=[Pass1291033336]}
+       Parameters = {user=[User829455239], pass=[Pass371269738]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -966,16 +1528,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"2b2869a7-7a7f-4f31-8963-2cc6c70a91d7"}
+             Body = {"token":"9c13337d-dcbe-4b85-86c5-15bada8fa66e"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC129842045/redeem
+      Request URI = /api/giftcards/GC2051421250/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 2b2869a7-7a7f-4f31-8963-2cc6c70a91d7"]
+          Headers = [Authorization:"Bearer 9c13337d-dcbe-4b85-86c5-15bada8fa66e"]
              Body = null
     Session Attrs = {}
 
@@ -1010,9 +1572,9 @@ MockHttpServletResponse:
 
 MockHttpServletRequest:
       HTTP Method = GET
-      Request URI = /api/giftcards/GC129842045/balance
+      Request URI = /api/giftcards/GC2051421250/balance
        Parameters = {}
-          Headers = [Authorization:"Bearer 2b2869a7-7a7f-4f31-8963-2cc6c70a91d7"]
+          Headers = [Authorization:"Bearer 9c13337d-dcbe-4b85-86c5-15bada8fa66e"]
              Body = null
     Session Attrs = {}
 
@@ -1048,7 +1610,81 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User126260515], pass=[WrongPass]}
+       Parameters = {user=[User7018917], pass=[Pass1910958858]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#login(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"token":"37d64b65-75df-41df-9e15-3c70e54ae43e"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/giftcards/GC_INEXISTENTE/balance
+       Parameters = {}
+          Headers = [Authorization:"Bearer 37d64b65-75df-41df-9e15-3c70e54ae43e"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#balance(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = CardNotFound
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/login
+       Parameters = {user=[User771291053], pass=[WrongPass]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -1085,7 +1721,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User379494260], pass=[Pass1019841078]}
+       Parameters = {user=[User720534330], pass=[Pass73892944]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -1114,16 +1750,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"6a34a7df-299f-481e-82e7-2e6b07ed596d"}
+             Body = {"token":"7a0bd5e4-ecc5-471e-9c67-a25de493a364"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1726301754/redeem
+      Request URI = /api/giftcards/GC604861550/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 6a34a7df-299f-481e-82e7-2e6b07ed596d"]
+          Headers = [Authorization:"Bearer 7a0bd5e4-ecc5-471e-9c67-a25de493a364"]
              Body = null
     Session Attrs = {}
 
@@ -1159,7 +1795,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User1979949848], pass=[Pass1042639694]}
+       Parameters = {user=[User1304124516], pass=[Pass677385385]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -1188,16 +1824,16 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"9f222d7a-6631-4ec3-a189-c3085beac879"}
+             Body = {"token":"d562dc62-fc0a-4874-a74a-8ff99f8180fd"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /api/giftcards/GC1726301754/redeem
+      Request URI = /api/giftcards/GC604861550/redeem
        Parameters = {}
-          Headers = [Authorization:"Bearer 9f222d7a-6631-4ec3-a189-c3085beac879"]
+          Headers = [Authorization:"Bearer d562dc62-fc0a-4874-a74a-8ff99f8180fd"]
              Body = null
     Session Attrs = {}
 
@@ -1233,7 +1869,7 @@ MockHttpServletResponse:
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/giftcards/login
-       Parameters = {user=[User789293825], pass=[Pass673118055]}
+       Parameters = {user=[User1846384162], pass=[Pass193591932]}
           Headers = []
              Body = null
     Session Attrs = {}
@@ -1262,14 +1898,84 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"token":"d3b69283-2cf2-4a58-b2f2-3c91df93d12d"}
+             Body = {"token":"3da2be56-c88d-48e7-8d2d-919995daebc9"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/GC_FANTASMA/redeem
+       Parameters = {}
+          Headers = [Authorization:"Bearer 3da2be56-c88d-48e7-8d2d-919995daebc9"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#redeemCard(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.RuntimeException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"12"]
+     Content type = text/plain;charset=UTF-8
+             Body = CardNotFound
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/giftcards/login
+       Parameters = {user=[User99140769], pass=[Pass979617346]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.udesa.giftcards.controller.GiftCardController
+           Method = org.udesa.giftcards.controller.GiftCardController#login(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"token":"c4b9b2b0-393d-4dd7-b6ae-b1cf836e2978"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
-  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/benjavitale/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.16/4a451ee6484abac3a498df0f3b33ed00a6fced4d/byte-buddy-agent-1.14.16.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -36,4 +36,9 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true // Pon true si quieres ver los System.out.println
+        exceptionFormat "full"
+    }
 }

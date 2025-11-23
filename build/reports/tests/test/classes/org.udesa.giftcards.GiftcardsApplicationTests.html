@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.002s</div>
+<div class="counter">0.518s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#">Standard output</a>
 </li>
+<li>
+<a href="#">Standard error</a>
+</li>
 </ul>
 <div class="tab">
 <h2>Tests</h2>
@@ -79,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.002s</td>
+<td class="success">0.518s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +90,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-11-23T18:28:11.783-03:00  INFO 24156 --- [giftcards] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.udesa.giftcards.GiftcardsApplicationTests]: GiftcardsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-11-23T18:28:11.793-03:00  INFO 24156 --- [giftcards] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.udesa.giftcards.GiftcardsApplication for test class org.udesa.giftcards.GiftcardsApplicationTests
+<pre>19:38:58.033 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.udesa.giftcards.GiftcardsApplicationTests]: GiftcardsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:38:58.147 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.udesa.giftcards.GiftcardsApplication for test class org.udesa.giftcards.GiftcardsApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -98,23 +101,34 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2025-11-23T18:28:11.819-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : Starting GiftcardsApplicationTests using Java 23-valhalla with PID 24156 (started by benjavitale in /Users/benjavitale/IdeaProjects/TPB_software)
-2025-11-23T18:28:11.819-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-11-23T18:28:11.943-03:00  INFO 24156 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-23T18:28:11.947-03:00  INFO 24156 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
-2025-11-23T18:28:12.048-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-11-23T18:28:12.049-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:92237b67-c24d-4dd3-8238-7db1e80c7629 user=SA
-2025-11-23T18:28:12.049-03:00  INFO 24156 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-11-23T18:28:12.050-03:00  INFO 24156 --- [giftcards] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-23T18:28:12.051-03:00  INFO 24156 --- [giftcards] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-23T18:28:12.055-03:00  INFO 24156 --- [giftcards] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-23T18:28:12.091-03:00  INFO 24156 --- [giftcards] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-23T18:28:12.094-03:00  INFO 24156 --- [giftcards] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-23T18:28:12.151-03:00  WARN 24156 --- [giftcards] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-23T18:28:12.228-03:00  INFO 24156 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : Started GiftcardsApplicationTests in 0.427 seconds (process running for 5.651)
+2025-11-23T19:38:58.486-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : Starting GiftcardsApplicationTests using Java 23-valhalla with PID 26621 (started by benjavitale in /Users/benjavitale/IdeaProjects/TPB_software)
+2025-11-23T19:38:58.489-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-11-23T19:38:59.037-03:00  INFO 26621 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-23T19:38:59.079-03:00  INFO 26621 --- [giftcards] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2025-11-23T19:38:59.430-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-23T19:38:59.648-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b1a8aee3-9868-4b24-92a2-2a7707d12743 user=SA
+2025-11-23T19:38:59.649-03:00  INFO 26621 --- [giftcards] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-23T19:38:59.717-03:00  INFO 26621 --- [giftcards] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-23T19:38:59.762-03:00  INFO 26621 --- [giftcards] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-11-23T19:38:59.789-03:00  INFO 26621 --- [giftcards] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-23T19:38:59.983-03:00  INFO 26621 --- [giftcards] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-23T19:39:00.616-03:00  INFO 26621 --- [giftcards] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-23T19:39:00.652-03:00  INFO 26621 --- [giftcards] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-23T19:39:01.332-03:00  WARN 26621 --- [giftcards] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-23T19:39:01.929-03:00  INFO 26621 --- [giftcards] [    Test worker] o.u.giftcards.GiftcardsApplicationTests  : Started GiftcardsApplicationTests in 3.627 seconds (process running for 5.074)
 &gt;&gt;&gt; Usuarios cargados.
 &gt;&gt;&gt; Merchants cargados.
 &gt;&gt;&gt; GiftCards cargadas.
+</pre>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/Users/benjavitale/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.16/4a451ee6484abac3a498df0f3b33ed00a6fced4d/byte-buddy-agent-1.14.16.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
 </pre>
 </span>
 </div>
@@ -126,7 +140,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14</a> at Nov 23, 2025, 6:28:12 PM</p>
+<a href="https://www.gradle.org">Gradle 8.14</a> at Nov 23, 2025, 7:39:04 PM</p>
 </div>
 </div>
 </body>

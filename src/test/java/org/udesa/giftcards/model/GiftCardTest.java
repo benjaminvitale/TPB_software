@@ -10,13 +10,13 @@ public class GiftCardTest {
 
     @Test
     public void aSimpleCard() {
-        // Antes: .balance() -> Ahora: .getBalance() (Lombok)
+
         assertEquals( 10, newCard().getBalance() );
     }
 
     @Test
     public void aSimpleIsNotOwnedCard() {
-        // Antes: .owned() -> Ahora: .isOwned() (Tu implementación en la Entidad)
+
         assertFalse( newCard().isOwned() );
     }
 
@@ -38,8 +38,7 @@ public class GiftCardTest {
         aCard.charge( 2, "Un cargo" );
 
         assertEquals( 8, aCard.getBalance() );
-        // getLast() requiere Java 21, si usas Java 17 o inferior usa: .get(size() - 1)
-        // Asumo que usas Java moderno como en el ejemplo original.
+
         assertEquals( "Un cargo", aCard.getCharges().get(aCard.getCharges().size() - 1) );
     }
 

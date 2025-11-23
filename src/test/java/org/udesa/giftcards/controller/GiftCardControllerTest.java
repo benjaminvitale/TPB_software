@@ -62,9 +62,6 @@ public class GiftCardControllerTest {
         return cardRepo.save(new GiftCard("GC" + nextKey(), balance));
     }
 
-    private MerchantVault savedMerchant() {
-        return merchantRepo.save(new MerchantVault("M" + nextKey()));
-    }
 
     private int nextKey() {
         return Math.abs(randomStream.nextInt());
@@ -206,14 +203,133 @@ public class GiftCardControllerTest {
         redeem(token, card.getSerialNumber());
 
         // 2. VIAJE EN EL TIEMPO: Forzamos al reloj a devolver 6 minutos después
-        // La sesión se creó a las 12:00. Ahora son las 12:06. Límite: 5 min.
         when(clock.now()).thenReturn(fixedStartTime.plusMinutes(6));
 
         // 3. Intentamos consultar saldo -> Debe fallar (500) porque el token expiró
         balanceFailing(token, card.getSerialNumber());
     }
 
-    // --- HTTP REQUEST HELPERS (Estilo TusLibros) ---
+    @Test
+    public void test13CannotRedeemNonExistingCard() throws Exception {
+        UserVault user = savedUser();
+        String token = login(user.getUsername(), user.getPassword());
+
+        // Intentamos redimir una tarjeta que no está en la DB
+        redeemFailing(token, "GC_FANTASMA");
+    }
+
+    @Test
+    public void test14BalanceFailsForNonExistingCard() throws Exception {
+        UserVault user = savedUser();
+        String token = login(user.getUsername(), user.getPassword());
+
+        // Intentamos ver saldo de algo que no existe
+        balanceFailing(token, "GC_INEXISTENTE");
+    }
+
+    @Test
+    public void test15InvalidTokenRejectedEverywhere() throws Exception {
+        UserVault user = savedUser();
+        GiftCard card = savedCard(200);
+
+        // Token con formato basura (no es UUID)
+        String invalidToken = "Bearer basura_mal_formada";
+
+        // Debe fallar en todos los endpoints protegidos
+        redeemFailing(invalidToken, card.getSerialNumber());
+        balanceFailing(invalidToken, card.getSerialNumber());
+
+        // Test manual para details con header invalido
+        mockMvc.perform(get("/api/giftcards/" + card.getSerialNumber() + "/details")
+                        .header("Authorization", invalidToken))
+                .andExpect(status().is(500));
+    }
+
+    @Test
+    public void test16TokenExpiredFailsOnRedeemAndDetails() throws Exception {
+        UserVault user = savedUser();
+        GiftCard card = savedCard(150);
+
+        LocalDateTime start = LocalDateTime.of(2025, 1, 1, 12, 0, 0);
+        when(clock.now()).thenReturn(start);
+
+        String token = login(user.getUsername(), user.getPassword());
+
+        // Avanzamos el tiempo más allá de los 5 minutos (ej: 10 min)
+        when(clock.now()).thenReturn(start.plusMinutes(10));
+
+        // El token ya no debe servir para operaciones de usuario
+        redeemFailing(token, card.getSerialNumber());
+        balanceFailing(token, card.getSerialNumber());
+
+        mockMvc.perform(get("/api/giftcards/" + card.getSerialNumber() + "/details")
+                        .header("Authorization", "Bearer " + token))
+                .andExpect(status().is(500));
+
+    }
+
+    @Test
+    public void test17DetailsMustBeInCorrectOrder() throws Exception {
+        UserVault user = savedUser();
+        GiftCard card = savedCard(300);
+        MerchantVault merchant = savedMerchant();
+        String token = login(user.getUsername(), user.getPassword());
+
+        redeem(token, card.getSerialNumber());
+
+        // Hacemos 3 cargos en orden
+        charge(merchant.getMerchantCode(), card.getSerialNumber(), 10, "Primero");
+        charge(merchant.getMerchantCode(), card.getSerialNumber(), 20, "Segundo");
+        charge(merchant.getMerchantCode(), card.getSerialNumber(), 30, "Tercero");
+
+        List<String> details = details(token, card.getSerialNumber());
+
+        // Verificamos que la lista respete el orden de inserción
+        assertEquals(List.of("Primero", "Segundo", "Tercero"), details);
+    }
+    @Test
+    public void test18MerchantCannotChargeUnredeemedCard() throws Exception {
+
+
+        GiftCard card = savedCard(100); // Tarjeta virgen
+        MerchantVault merchant = savedMerchant();
+
+        // Intentamos cobrar sin haber hecho login/redeem
+        // Debe fallar porque la tarjeta no tiene dueño (Estado inválido para cobro)
+        chargeFailing(merchant.getMerchantCode(), card.getSerialNumber(), 10, "Intento de Cobro");
+    }
+
+    @Test
+    public void test19UserCannotRedeemTheSameCardTwice() throws Exception {
+        // Caso: Idempotencia o Error de Estado. El usuario ya tiene la tarjeta, no debería poder reclamarla de nuevo.
+
+        UserVault user = savedUser();
+        GiftCard card = savedCard(100);
+        String token = login(user.getUsername(), user.getPassword());
+
+        // 1. Primer canje exitoso
+        redeem(token, card.getSerialNumber());
+
+        // 2. Segundo canje (Mismo usuario, misma tarjeta) -> DEBE FALLAR
+        redeemFailing(token, card.getSerialNumber());
+    }
+    @Test
+    public void test20MerchantNameIsPersisted() {
+        // Usamos el helper que ahora guarda nombre
+        MerchantVault merchant = savedMerchant();
+
+        // Verificamos yendo a la base de datos real
+        MerchantVault found = merchantRepo.findById(merchant.getId()).orElseThrow();
+
+
+        assertEquals("Merchant Name", found.getName());
+        assertEquals("M" + merchant.getMerchantCode().substring(1), found.getMerchantCode());
+    }
+
+    private MerchantVault savedMerchant() {
+        return merchantRepo.save(new MerchantVault("M" + nextKey(), "Merchant Name"));
+    }
+
 
     private String login(String user, String pass) throws Exception {
         String response = mockMvc.perform(post("/api/giftcards/login")

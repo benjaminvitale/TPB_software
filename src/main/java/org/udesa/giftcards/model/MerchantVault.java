@@ -12,9 +12,12 @@ import lombok.Setter;
 public class MerchantVault extends ModelEntity {
 
     @Column(unique = true)
-    private String merchantCode; // Ej: "M1"
+    private String merchantCode; // Inmutable (Business Key)
 
-    public MerchantVault(String merchantCode) {
+    private String name;
+
+    public MerchantVault(String merchantCode, String name) {
         this.merchantCode = merchantCode;
+        this.name = name;
     }
 }

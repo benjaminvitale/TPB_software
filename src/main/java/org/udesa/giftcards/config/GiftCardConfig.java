@@ -31,8 +31,8 @@ public class GiftCardConfig {
 
             // 2. Crear Merchants
             if (merchantRepo.count() == 0) {
-                merchantRepo.save(new MerchantVault("M1")); // El merchant del test
-                merchantRepo.save(new MerchantVault("ZARA"));
+                merchantRepo.save(new MerchantVault("M1", "Starbucks"));
+                merchantRepo.save(new MerchantVault("ZARA", "Zara Store"));
                 System.out.println(">>> Merchants cargados.");
             }
 

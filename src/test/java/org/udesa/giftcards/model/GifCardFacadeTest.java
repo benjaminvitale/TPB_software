@@ -29,7 +29,7 @@ public class GifCardFacadeTest {
     @Mock private MerchantVaultService merchantService;
     @Mock private Clock clock;
 
-    @InjectMocks // Inyecta los mocks dentro del Facade automáticamente
+    @InjectMocks
     private GifCardFacade facade;
 
     private UserVault bob;

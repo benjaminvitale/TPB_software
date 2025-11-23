@@ -8,7 +8,8 @@ public class MerchantVaultService extends ModelService<MerchantVault, MerchantVa
 
     @Override
     protected void updateData(MerchantVault existing, MerchantVault updated) {
-        // Lógica de update si fuera necesaria
+        // El código NO se toca (es identidad), pero el nombre sí puede cambiar
+        existing.setName(updated.getName());
     }
 
     public boolean exists(String code) {
