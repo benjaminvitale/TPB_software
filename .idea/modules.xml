@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TPB_software.iml" filepath="$PROJECT_DIR$/.idea/TPB_software.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TPB_software.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TPB_software.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
