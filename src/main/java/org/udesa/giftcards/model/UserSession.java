@@ -12,7 +12,7 @@ public class UserSession {
     }
 
     public String userAliveAt( Clock clock ) {
-        if (clock.now().isAfter( stamp.plusMinutes( 15 ) )) throw new RuntimeException( "InvalidToken" );
+        if (clock.now().isAfter( stamp.plusMinutes( 5 ) )) throw new RuntimeException( "InvalidToken" );
 
         return user;
     }

@@ -18,7 +18,7 @@ public class GiftCardConfig {
     @Bean
     public CommandLineRunner initData(
             UserVaultRepository userRepo,
-            MerchantRepository merchantRepo,
+            MerchantVaultRepository merchantRepo,
             GiftCardRepository cardRepo) {
 
         return args -> {
@@ -31,8 +31,8 @@ public class GiftCardConfig {
 
             // 2. Crear Merchants
             if (merchantRepo.count() == 0) {
-                merchantRepo.save(new Merchant("M1")); // El merchant del test
-                merchantRepo.save(new Merchant("ZARA"));
+                merchantRepo.save(new MerchantVault("M1")); // El merchant del test
+                merchantRepo.save(new MerchantVault("ZARA"));
                 System.out.println(">>> Merchants cargados.");
             }
 

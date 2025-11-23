@@ -1,4 +1,3 @@
-
 package org.udesa.giftcards.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 @Transactional
@@ -15,17 +15,15 @@ public class GifCardFacade {
     public static final String InvalidMerchant = "InvalidMerchant";
     public static final String InvalidToken = "InvalidToken";
 
-    // Inyectamos los SERVICIOS, no los repositorios directos (Estilo TusLibros)
     @Autowired private UserService userService;
     @Autowired private GiftCardService cardService;
-    @Autowired private MerchantService merchantService;
+    @Autowired private MerchantVaultService merchantService;
     @Autowired private Clock clock;
 
-    // Sesiones en memoria (Tokens) - Esto no cambia
-    private Map<UUID, UserSession> sessions = new HashMap<>();
+    // USO DE CONCURRENTHASHMAP: Vital para aplicaciones web multihilo
+    private Map<UUID, UserSession> sessions = new ConcurrentHashMap<>();
 
     public UUID login(String username, String pass) {
-        // Verifica contra UserVault
         UserVault user = userService.findByName(username);
 
         if (!user.getPassword().equals(pass)) {
@@ -38,12 +36,11 @@ public class GifCardFacade {
     }
 
     public void redeem(UUID token, String serialNumber) {
-        String username = findUser(token); // Valida token
-        GiftCard card = cardService.findBySerial(serialNumber); // Busca GiftCard
+        String username = findUser(token);
+        GiftCard card = cardService.findBySerial(serialNumber);
 
-        card.redeem(username); // Lógica de dominio
-
-        cardService.add(card); // Persiste cambios usando el método 'add' de ModelService
+        card.redeem(username);
+        cardService.add(card);
     }
 
     public int balance(UUID token, String serialNumber) {
@@ -61,10 +58,9 @@ public class GifCardFacade {
 
         GiftCard card = cardService.findBySerial(serialNumber);
         card.charge(amount, description);
-        cardService.add(card); // Persiste
+        cardService.add(card);
     }
 
-    // Helpers privados
     private GiftCard ownedCard(UUID token, String serialNumber) {
         String username = findUser(token);
         GiftCard card = cardService.findBySerial(serialNumber);

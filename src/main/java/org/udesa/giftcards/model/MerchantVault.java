@@ -9,11 +9,12 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @NoArgsConstructor
-public class Merchant extends ModelEntity {
-    @Column(unique = true)
-    private String code; // Ej: "M1"
+public class MerchantVault extends ModelEntity {
 
-    public Merchant(String code) {
-        this.code = code;
+    @Column(unique = true)
+    private String merchantCode; // Ej: "M1"
+
+    public MerchantVault(String merchantCode) {
+        this.merchantCode = merchantCode;
     }
 }
