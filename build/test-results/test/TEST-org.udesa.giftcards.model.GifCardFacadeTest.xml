@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.udesa.giftcards.model.GifCardFacadeTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-11-23T21:28:12.246Z" hostname="Benjas-MacBook-Air.local" time="0.094">
+  <properties/>
+  <testcase name="userCannotUseAnInvalidToken()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.069"/>
+  <testcase name="merchantCannotOverchargeACard()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.004"/>
+  <testcase name="userCanOpenASession()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.002"/>
+  <testcase name="merchantCanChargeARedeemedCard()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.004"/>
+  <testcase name="unknownUserCannotOpenASession()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.003"/>
+  <testcase name="userCannotCheckOnAlienCard()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.002"/>
+  <testcase name="tokenExpires()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.003"/>
+  <testcase name="userCanRedeemACard()" classname="org.udesa.giftcards.model.GifCardFacadeTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
